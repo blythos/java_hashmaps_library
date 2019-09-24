@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class TestLibrary {
 
@@ -25,4 +26,14 @@ public class TestLibrary {
     public void libraryHasBooks(){
         assertEquals(3, library.checkCollectionSize());
     }
+
+    @Test
+    public void libraryCannotHaveMoreThanCapacity(){
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book3);
+        assertEquals(5, library.checkCollectionSize());
+    }
+
+
 }

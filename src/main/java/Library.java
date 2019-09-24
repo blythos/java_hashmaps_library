@@ -10,11 +10,13 @@ public class Library {
         this.capacity = capacity;
     }
 
-    public void addBook(Book book) {
-        this.collection.add(book);
-    }
-
     public int checkCollectionSize(){
         return this.collection.size();
+    }
+
+    public void addBook(Book book) {
+        if (this.capacity > this.checkCollectionSize()) {
+            this.collection.add(book);
+        }
     }
 }
