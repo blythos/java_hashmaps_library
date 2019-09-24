@@ -19,4 +19,9 @@ public class Library {
             this.collection.add(book);
         }
     }
+
+    public Book removeBook(Book book) {
+        this.collection.remove(book);
+        return book;
+    }
 }
