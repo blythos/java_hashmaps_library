@@ -35,5 +35,10 @@ public class TestLibrary {
         assertEquals(5, library.checkCollectionSize());
     }
 
+    @Test
+    public void keepTrackOfFantasyBooks(){
+        assertEquals(2, library.genreAmount("Fantasy"));
+    }
+
 
 }
