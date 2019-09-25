@@ -32,7 +32,7 @@ public class Library {
     private void updateGenreCount(String genre){
         if (this.genreCount.containsKey(genre)){
             Integer total = genreCount.get(genre) + 1;
-            genreCount.replace(genre, total);
+            genreCount.put(genre, total);
         }
         else {
             this.genreCount.put(genre, 1);

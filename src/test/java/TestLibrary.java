@@ -10,6 +10,7 @@ public class TestLibrary {
     private Book book1;
     private Book book2;
     private Book book3;
+    private Book book4;
 
     @Before
     public void before(){
@@ -17,9 +18,11 @@ public class TestLibrary {
         book1 = new Book("Equal Rites", "Terry Pratchett", "Fantasy");
         book2 = new Book("The Traitor Baru Cormorant", "Seth Dickinson", "Fantasy");
         book3 = new Book("My Year of Rest and Relaxation", "Ottessa Moshfegh", "Literary");
+        book4 = new Book("Harry Potter", "JK Rowling","Fantasy");
         library.addBook(book1);
         library.addBook(book2);
         library.addBook(book3);
+        library.addBook(book4);
     }
 
     @Test
@@ -37,7 +40,7 @@ public class TestLibrary {
 
     @Test
     public void keepTrackOfFantasyBooks(){
-        assertEquals(2, library.genreAmount("Fantasy"));
+        assertEquals(3, library.genreAmount("Fantasy"));
     }
 
 
